@@ -31,9 +31,12 @@ function zeroPlentiful(arr) {
     arr.forEach((num, idx) => {
      if (num === 0) {
        counter[index] = counter[index] ? counter[index] + 1 : 1;
-     } else {
+     } else if (num !== 0) {
        index = counter.length;
      } 
     });
     return counter.every(item => item >= 4) ? counter.length : 0;
   }
+
+
+  
