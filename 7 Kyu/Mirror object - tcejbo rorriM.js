@@ -15,6 +15,14 @@
 // arara: arara
 // xyz: zyx
 
+function mirror (obj) {
+    var nob={};
+    for (var i in obj){
+      nob[i]=i.split("").reverse().join("");
+    }
+    return nob;
+  };
+
 const mirror = obj => {
     return Object.keys(obj).reduce((pre, val) => (pre[val] = [...val].reverse().join(''), pre), {})
     };
